@@ -6,7 +6,7 @@ import { sendPaymentConfirmed } from './mailer.js';
 
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: ['http://localhost:5173', 'https://tu-frontend-admin.com'] }));
+app.use(cors({ origin: ['http://localhost:5173', 'https://grupounabestiacocktails.vercel.app'] }));
 app.use(express.json());
 
 // Endpoint: el admin lo llama cuando marca pago confirmado
