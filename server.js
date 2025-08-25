@@ -16,6 +16,7 @@ app.use(
     methods: ['POST', 'OPTIONS', 'GET'],
   })
 );
+app.use(express.json());
 
 // Health (opcional)
 app.get('/health', (_req, res) => res.json({ ok: true }));
