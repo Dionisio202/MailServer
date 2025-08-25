@@ -3,7 +3,10 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import { sendPaymentConfirmed, sendRegistrationReceived } from './mailer.js';
-
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = path.dirname(__filename);
 const app = express();
 
 app.use(helmet());
@@ -65,6 +68,19 @@ app.post('/api/mails/registration-received', async (req, res) => {
     console.error('Error al enviar el correo (registration-received):', err);
     return res.status(500).json({ ok: false, error: 'SEND_FAILED' });
   }
+});
+
+
+//get file 
+
+app.get('/download/reglas', (req, res) => {
+  const filePath = path.join(__dirname, 'files', 'reglas.pdf'); // ruta absoluta
+  res.download(filePath, 'Reglas_UCB_Masters.pdf', (err) => {
+    if (err) {
+      console.error('Error enviando archivo:', err);
+      if (!res.headersSent) res.status(404).json({ ok:false, error:'FILE_NOT_FOUND' });
+    }
+  });
 });
 
 const PORT = process.env.PORT || 3001;
