@@ -35,7 +35,7 @@ export async function sendPaymentConfirmed({ name, email, contestName }) {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Inscripción Confirmada - UCB Masters</title>
+      <title>Inscripción Confirmada - UBC Masters</title>
     </head>
     <body style="margin:0;padding:0;font-family:'Arial',sans-serif;background-color:#0f0f0f;color:#ffffff;">
       
