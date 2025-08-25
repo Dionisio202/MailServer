@@ -7,7 +7,7 @@ const OUTLOOK_PASS = process.env.OUTLOOK_PASS;
 const OUTLOOK_HOST = process.env.OUTLOOK_HOST || 'smtp-mail.outlook.com';
 const OUTLOOK_PORT = Number(process.env.OUTLOOK_PORT || 587);
 
-export const transporter = nodemailer.createTransporter({
+export const transporter = nodemailer.createTransport({
   host: OUTLOOK_HOST,
   port: OUTLOOK_PORT,
   secure: false, // true si usas 465
@@ -17,7 +17,7 @@ export const transporter = nodemailer.createTransporter({
 /** Email genérico */
 export async function sendEmail({ to, subject, text, html }) {
   return transporter.sendMail({
-    from: `"UCB Masters of Cocktail" <${OUTLOOK_USER}>`,
+    from: `"UCB Masters" <${OUTLOOK_USER}>`,
     to,
     subject,
     text,
@@ -25,7 +25,7 @@ export async function sendEmail({ to, subject, text, html }) {
   });
 }
 
-/** Correo de pago confirmado con diseño profesional */
+/** Correo de pago confirmado con reglas incluidas en el HTML */
 export async function sendPaymentConfirmed({ name, email, contestName }) {
   const subject = `🏆 ¡Inscripción confirmada! - ${contestName}`;
   
@@ -166,5 +166,3 @@ export async function sendPaymentConfirmed({ name, email, contestName }) {
 
   return sendEmail({ to: email, subject, html });
 }
-
-
