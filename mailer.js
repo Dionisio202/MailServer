@@ -92,43 +92,11 @@ export async function sendPaymentConfirmed({ name, email, contestName }) {
                 <span style="color:#f59e0b;margin-right:10px;font-weight:bold;">🗓️</span>
                 <span style="color:#d1d5db;">9 de Noviembre, 2025</span>
               </div>
-              <div style="display:flex;align-items:center;font-size:14px;">
-                <span style="color:#f59e0b;margin-right:10px;font-weight:bold;">⏰</span>
-                <span style="color:#d1d5db;">Presentarse 30 minutos antes del evento</span>
-              </div>
+             
             </div>
           </div>
 
-          <!-- Reglas de la competencia -->
-          <div style="margin-bottom:30px;">
-            <h3 style="margin:0 0 20px 0;color:#f59e0b;font-size:18px;display:flex;align-items:center;">
-              📋 Reglas de la Competencia
-            </h3>
-            <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:20px;">
-              <div style="display:grid;gap:15px;">
-                <div style="display:flex;align-items:flex-start;gap:12px;">
-                  <span style="background:#f59e0b;color:#000;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;margin-top:2px;">1</span>
-                  <span style="color:#d1d5db;font-size:14px;line-height:1.4;">Presentarse <strong>30 minutos antes</strong> del inicio del evento</span>
-                </div>
-                <div style="display:flex;align-items:flex-start;gap:12px;">
-                  <span style="background:#f59e0b;color:#000;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;margin-top:2px;">2</span>
-                  <span style="color:#d1d5db;font-size:14px;line-height:1.4;">Traer sus propios <strong>utensilios básicos</strong> de coctelería</span>
-                </div>
-                <div style="display:flex;align-items:flex-start;gap:12px;">
-                  <span style="background:#f59e0b;color:#000;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;margin-top:2px;">3</span>
-                  <span style="color:#d1d5db;font-size:14px;line-height:1.4;">No está permitido el uso de bebidas alcohólicas <strong>externas al evento</strong></span>
-                </div>
-                <div style="display:flex;align-items:flex-start;gap:12px;">
-                  <span style="background:#f59e0b;color:#000;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;margin-top:2px;">4</span>
-                  <span style="color:#d1d5db;font-size:14px;line-height:1.4;">El jurado evaluará <strong>sabor, presentación y originalidad</strong></span>
-                </div>
-                <div style="display:flex;align-items:flex-start;gap:12px;">
-                  <span style="background:#f59e0b;color:#000;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;margin-top:2px;">5</span>
-                  <span style="color:#d1d5db;font-size:14px;line-height:1.4;">El fallo del jurado es <strong>inapelable</strong></span>
-                </div>
-              </div>
-            </div>
-          </div>
+         
 
           <!-- Mensaje motivacional -->
           <div style="background:linear-gradient(135deg,#f59e0b20,#ea580c20);border-radius:12px;padding:25px;text-align:center;margin-bottom:30px;border:1px solid rgba(245,158,11,0.3);">
