@@ -74,11 +74,11 @@ app.post('/api/mails/registration-received', async (req, res) => {
 //get file 
 
 app.get('/download/reglas', (req, res) => {
-  const filePath = path.join(__dirname, 'files', 'Reglas_UCB_Masters.zip');
+  const filePath = path.join(__dirname, 'files', 'Reglas_UCB_Masters.rar');
 
-  res.download(filePath, 'UBC_Masters_2025.zip', (err) => {
+  res.download(filePath, 'UBC_Masters_2025.rar', (err) => {
     if (err) {
-      console.error('Error enviando ZIP:', err);
+      console.error('Error enviando RAR:', err);
       if (!res.headersSent) {
         res.status(404).json({ ok: false, error: 'FILE_NOT_FOUND' });
       }
