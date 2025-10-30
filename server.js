@@ -71,7 +71,7 @@ app.post('/api/mails/registration-received', async (req, res) => {
 });
 
 
-//get file 
+//get file this
 
 app.get('/download/reglas', (req, res) => {
   const filePath = path.join(__dirname, 'files', 'Reglas_UCB_Masters.zip');
